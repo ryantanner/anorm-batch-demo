@@ -1,0 +1,13 @@
+@(list: List[Long])
+
+@main("Welcome to Play 2.1") {
+    
+  Here is your list:
+
+  <ol>
+    @list.map { x =>
+      <li>@x</li>
+    }
+  </ol>
+    
+}
