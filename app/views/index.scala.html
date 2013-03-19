@@ -4,10 +4,30 @@
     
   Here is your list:
 
-  <ol>
+  <ol id="randomList">
     @list.map { x =>
       <li>@x</li>
     }
   </ol>
+
+  Updates every ten seconds. <span id="num">0</span> updates so far.
+
+  <script type="text/javascript" charset="utf-8">
+    var numUpdates = 0;
+    var newList = function(list) {
+      $('#randomList li').each(function (idx, elem) {
+        $(elem).text(list[idx]);
+      });
+      numUpdates = numUpdates + 1;
+      $('#num').text(numUpdates);
+      console.log("updated list");
+    }
+  </script>
+
+  <iframe id="comet" src="@routes.Application.list.unique"></iframe>
+
+  <style type="text/css">
+    iframe { display: none; }
+  </style>
     
 }
