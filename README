@@ -1,4 +1,3 @@
-This is your new Play 2.1 application
-=====================================
+This is a demo to show how batch inserts are used in Anorm in the Play! Framework. 
 
-This file will be packaged with your application, when using `play dist`.
+I wrote it to answer this question: http://stackoverflow.com/questions/15511109/persist-lists-using-the-play-framework-and-anorm
